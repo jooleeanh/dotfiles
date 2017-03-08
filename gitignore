@@ -3,3 +3,6 @@
 
 # Figaro gem
 config/application.yml
+
+# Others
+typescript
