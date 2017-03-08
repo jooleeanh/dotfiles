@@ -10,17 +10,55 @@
   remote = yellow
 
 [core]
-  pager = less -FRSX
+	pager = less -+$LESS -FRX
+	editor = vim
+	filemode = false
 
 [alias]
-  co = checkout
-  st = status -sb
+
+  # List git alias
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+
+	co = checkout
+  m = checkout master
+	st = status -s
   br = branch
-  ci = commit
-  fo = fetch origin
-  d = !git --no-pager diff
-  dt  = difftool
+  resetmaster = "!git checkout -b my-saved-work && git add . && git commit -m 'Saving my work, just in case' && git checkout master && git fetch origin && git reset --hard origin/master && git sweep"
+
+  dif = diff --word-diff
+  d = diff --color-words
+  # Diff with stat
   stat = !git --no-pager diff --stat
+
+  c = commit
+	ci = commit -m
+  ca = commit --amend # careful
+  # commit changes to last commit
+  amend = commit --amend -m
+  # puts HEAD to workin commit?
+  undo = reset --soft HEAD^
+  unstage = reset HEAD --
+
+  # Shows last
+  last = log -1 HEAD
+  # Shows nice log
+  ls = log --pretty=format:"%C(yellow)%h%C(blue)\\ [%cn]%Cred%d\\ %Creset%s" --decorate
+  # Shows log in one line
+  ol = log --pretty=oneline --abbrev-commit --graph --decorate
+  # Shows log with text wrapping
+  logw = log --less
+  # "log absolute date" Shows log in one line (commit id, date, commit text)
+  lad = log --pretty=format:"%C(yellow)%h\\ %C(blue)[%cn]\\ %C(cyan)%ad\\ %Creset%s\\ %Cred%d" --decorate --date=short
+  # "log (relative) date" Shows log in one line w/ relative date (commit id, date, commit text)
+  ld = log --pretty=format:"%C(yellow)%h%\\ C(blue)[%cn]\\ %C(cyan)%ad\\ %Creset%s\\ %Cred%d" --decorate --date=relative
+  # +/- per files
+  ll = log --stat --abbrev-commit
+  # commits per author
+  authors = shortlog -sn
+  # Shows commits+diff for one file
+  fl = log -u
+  # List each commit showing changed files
+  fo = fetch origin
 
   # Clean merged branches
   sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
@@ -32,11 +70,6 @@
   # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 
-  m = checkout master
-
-  # Removes a file from the index
-  unstage = reset HEAD --
-
 [help]
   autocorrect = 1
 
@@ -45,3 +78,6 @@
 
 [branch "master"]
   mergeoptions = --no-edit
+[user]
+	email = julian@appsmiles.fr
+	name = Julian Honma

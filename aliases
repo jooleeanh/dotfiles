@@ -5,3 +5,42 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
+
+# My aliases
+alias chr='google-chrome'
+alias chrn='google-chrome --new-window'
+alias treel='tree -L'
+alias atomaliases='atom -n --clear-window-state ~/.aliases ~/.atom/snippets.cson ~/.atom/keymap.cson ~/.gitconfig'
+alias aliasesv='cat ~/.aliases'
+alias ato='atom -n .'
+alias aton='atom -n'
+alias ato..='atom -n ../.'
+alias atoms='cat ~/.atom-shortcuts.md'
+alias ci='git commit -m "'
+alias te='open -a TextEdit'
+alias tw='open -a TextWrangler'
+alias scripts='cd ~/code/jooleeanh/dotfiles/scripts'
+alias aliases='open -a xcode  ~/.bashrc ~/.zshrc ~/.aliases ~/code/jooleeanh/dotfiles/scripts/*'
+
+### App's Miles ###
+
+# Directories
+alias apms='function _cd_appsmiles() {$APM_FOLDER_PATH/$1;}; _cd_appsmiles'
+alias api='$APM_FOLDER_PATH/api'
+alias apmmanager='$APM_FOLDER_PATH/apmmanager'
+alias apmand='$APM_FOLDER_PATH/apm-android'
+alias servand='$APM_FOLDER_PATH/apmservices-android'
+alias apmios='$APM_FOLDER_PATH/apmsticker-ios'
+alias servios='$APM_FOLDER_PATH/apmservices-ios'
+alias ps-and='$APM_FOLDER_PATH/ps-android'
+alias ps-ios='$APM_FOLDER_PATH/ps-ios'
+
+# Gitlab
+alias glpl='gitlab project list'
+alias glmr='$SCRIPT_FOLDER_PATH/gitlab_mr_create.sh'
+alias glic='$SCRIPT_FOLDER_PATH/gitlab_issue_create.sh'
+alias glil='$SCRIPT_FOLDER_PATH/gitlab_issue_list.sh'
+alias glpn='grep -e "\"" $SCRIPT_FOLDER_PATH/gitlab_match_project.sh'
+alias glmrv='grep -e "# " $SCRIPT_FOLDER_PATH/gitlab_mr_create.sh'
+alias glicv='grep -e "# " $SCRIPT_FOLDER_PATH/gitlab_issue_create.sh'
+alias glilv='grep -e "# " $SCRIPT_FOLDER_PATH/gitlab_issue_list.sh'
