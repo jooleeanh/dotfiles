@@ -9,7 +9,7 @@ case $1 in
     "ios-services")     PROJECT_ID=15 ;;
     "ios-apm")          PROJECT_ID=17 ;;
     "ios-demos")        PROJECT_ID= 21 ;;
-    "ps-android")       PROJECT_ID=24 ;;
+    "ps-and")           PROJECT_ID=24 ;;
     "ps-ios")           PROJECT_ID=23 ;;
     *) PROJECT_ID=$1 ;;
 esac
