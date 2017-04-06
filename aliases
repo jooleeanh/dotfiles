@@ -21,37 +21,3 @@ alias te='open -a TextEdit'
 alias scripts='cd $SCRIPT_PATH'
 alias aliases='aton ~/.bashrc ~/.zshrc ~/.aliases $SCRIPT_PATH/*'
 alias reload='exec ~/.zshrc'
-
-### App's Miles ###
-
-# Directories
-alias apms='function _cd_appsmiles() {$APM_PATH/$1;}; _cd_appsmiles'
-alias apmh='$APM_PATH'
-alias apmapi='$APM_PATH/api'
-alias apmmanager='$APM_PATH/apmmanager'
-alias apmand='$APM_PATH/apm-android'
-alias servand='$APM_PATH/apmservices-android'
-alias apmios='$APM_PATH/apmsticker-ios'
-alias servios='$APM_PATH/apmservices-ios'
-alias ps-and='$APM_PATH/ps-android'
-alias ps-ios='$APM_PATH/ps-ios'
-alias demos-and='$APM_PATH/demos-android'
-alias demos-ios='$APM_PATH/demos-ios'
-
-# Gitlab
-alias glpl='gitlab project list'
-alias glmc='$SCRIPT_PATH/gitlab_mr_create.sh'
-alias glmm='$SCRIPT_PATH/gitlab_mr_merge.sh'
-alias glic='$SCRIPT_PATH/gitlab_issue_create.sh'
-alias glil='$SCRIPT_PATH/gitlab_issue_list.sh'
-alias glpn='grep -e "\"" $SCRIPT_PATH/gitlab_match_project.sh'
-alias glmcv='grep -e "## " $SCRIPT_PATH/gitlab_mr_create.sh'
-alias glmmv='grep -e "## " $SCRIPT_PATH/gitlab_mr_merge.sh'
-alias glicv='grep -e "## " $SCRIPT_PATH/gitlab_issue_create.sh'
-alias glilv='grep -e "## " $SCRIPT_PATH/gitlab_issue_list.sh'
-
-# Mobile
-alias imageand='$SCRIPT_PATH/image_converter_android.sh'
-alias imageios='$SCRIPT_PATH/image_converter_ios.sh'
-alias imageandv='grep -e "## " $SCRIPT_PATH/image_converter_android.sh'
-alias imageiosv='grep -e "## " $SCRIPT_PATH/image_converter_ios.sh'

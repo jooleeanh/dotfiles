@@ -1,0 +1,33 @@
+### App's Miles ###
+
+# Directories
+alias apms='function _cd_appsmiles() {$APM_PATH/$1;}; _cd_appsmiles'
+alias apmh='$APM_PATH'
+alias apmapi='$APM_PATH/api'
+alias apmmanager='$APM_PATH/apmmanager'
+alias apmand='$APM_PATH/apm-android'
+alias servand='$APM_PATH/apmservices-android'
+alias apmios='$APM_PATH/apmsticker-ios'
+alias servios='$APM_PATH/apmservices-ios'
+alias ps-and='$APM_PATH/ps-android'
+alias ps-ios='$APM_PATH/ps-ios'
+alias demos-and='$APM_PATH/demos-android'
+alias demos-ios='$APM_PATH/demos-ios'
+
+# Gitlab
+alias glpl='gitlab project list'
+alias glmc='$APM_SCRIPT_PATH/gitlab_mr_create.sh'
+alias glmm='$APM_SCRIPT_PATH/gitlab_mr_merge.sh'
+alias glic='$APM_SCRIPT_PATH/gitlab_issue_create.sh'
+alias glil='$APM_SCRIPT_PATH/gitlab_issue_list.sh'
+alias glpn='grep -e "\"" $APM_SCRIPT_PATH/gitlab_match_project.sh'
+alias glmcv='grep -e "## " $APM_SCRIPT_PATH/gitlab_mr_create.sh'
+alias glmmv='grep -e "## " $APM_SCRIPT_PATH/gitlab_mr_merge.sh'
+alias glicv='grep -e "## " $APM_SCRIPT_PATH/gitlab_issue_create.sh'
+alias glilv='grep -e "## " $APM_SCRIPT_PATH/gitlab_issue_list.sh'
+
+# Mobile
+alias imageand='$APM_SCRIPT_PATH/image_converter_android.sh'
+alias imageios='$APM_SCRIPT_PATH/image_converter_ios.sh'
+alias imageandv='grep -e "## " $APM_SCRIPT_PATH/image_converter_android.sh'
+alias imageiosv='grep -e "## " $APM_SCRIPT_PATH/image_converter_ios.sh'
